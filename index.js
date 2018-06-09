@@ -1,5 +1,6 @@
 const express  = require('express');
 const app = express();
+const port = 3000 || process.env.PORT;
 
 app.use(express.static('public'));
 
@@ -15,7 +16,7 @@ app.get('*', (request,response)=>{
     response.send("404");
 });
 
-app.listen(3000, () => {
-    console.log("server running on 3000");
+app.listen( port , () => {
+    console.log(`App is running on ${port}`);
 });
 
