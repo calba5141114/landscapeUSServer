@@ -1,7 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser')
+const mongoose = require('mongoose');
 const app = express();
 const port = 3000 || process.env.PORT;
+
+mongoose.connect('mongodb://root:mongohacks42@ds253889.mlab.com:53889/palyhacks')
 
 app.use(express.static('public'));
 
