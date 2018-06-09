@@ -13,7 +13,7 @@ app.get('/utter', (request, response)=>{
 });
 
 app.get('*', (request,response)=>{
-    response.send("404");
+    response.sendFile(__dirname +  '/public/404page/404.html');
 });
 
 app.listen( port , () => {
