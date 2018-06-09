@@ -21,29 +21,48 @@
         <div>
             <label for="username">Create Username: </label>
             <br>
-            <input name="username" placeholder="" type="text">
+            <input name="username" placeholder="new username" type="text" required="">
         </div>
         <br>
         <div>
             <label for="password">Create Password: </label>
             <br>
-            <input name="password" placeholder="" type="password">
+            <input name="password" placeholder="" type="password"  required="">
         </div>
         <br>
         <div>
-            <label for="confirmpassword">Confirm Password: </label>
+            <label for="passwordConf">Confirm Password: </label>
             <br>
-            <input name="confirmpassword" placeholder="" type="password">
+            <input name="passwordConf" placeholder="" type="password"  required="">
         </div>
         <br>
         <div>
                 <label for="email">Enter Email: </label>
                 <br>
-                <input name="email" placeholder="" type="text">
+                <input name="email" placeholder=" new email" type="text"  required="">
         </div>
         <br>
         <button type="submit">Create Account</button>
     </form>
+
+    <br>
+
+    <form action="/formData2" method="POST">
+        <div>
+                <label for="logemail">Email: </label>
+                <br>
+                <input name="logemail" placeholder="email" type="text"  required="">
+            </div>
+            <br>
+            <div>
+                    <label for="logpassword">Password</label>
+                    <br>
+                    <input name="logpassword" placeholder="password" type="password"  required="">
+            </div>
+            <br>
+            <button type="submit">Login</button>
+    </form>
+
 </body>
 
 </html>
