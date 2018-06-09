@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/calba5141114/landscapeUSServer/issues"
   },
-  "homepage": "https://github.com/calba5141114/landscapeUSServer#readme"
+  "homepage": "https://github.com/calba5141114/landscapeUSServer#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
