@@ -6,7 +6,7 @@ router.get('/', (request, response) => {
     response.sendFile(path.resolve(__dirname + '/../public/index.html'));
 });
 
-router.post('/formData', (request, response) => {
+router.post('/formData2', (request, response) => {
     console.log(request.body);
     console.log(request.body.say);
     response.sendFile(path.resolve(__dirname + '/../public/home/home.html'));
