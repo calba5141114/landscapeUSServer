@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/calba5141114/landscapeUSServer#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3"
   }
 }

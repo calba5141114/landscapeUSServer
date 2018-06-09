@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>
-        Hello Index.html
-    </h1>
+    <form class="form" id="form-main" action="/formData" method="POST">
+        <div>
+            <label for="say">Say: </label>
+            <input name="say" placeholder="Hi!" type="text">
+        </div>
+        <br>
+        <div>
+            <label for="to">To: </label>
+            <input name="to" value="Express Forms" placeholder="Express Forms" type="text">
+        </div>
+        <br>
+        <button type="submit">Send</button>
+    </form>
 </body>
+
 </html>
