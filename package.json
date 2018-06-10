@@ -24,7 +24,11 @@
     "bcrypt": "^2.0.1",
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.1",
+<<<<<<< HEAD
     "ejs": "^2.6.1",
+=======
+    "connect-mongoose": "0.0.2",
+>>>>>>> 6b7f9ac165dba2dd1d246c2088ee3000909d508a
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "mongoose": "^5.1.4"
