@@ -3,8 +3,9 @@ const router = express.Router();
 const path = require("path");
 const User = require('../models/user.js')
 
+
 router.get('/', (request, response) => {
-    response.sendFile(path.resolve(__dirname + '/../public/index.html'));
+    response.render(path.resolve( __dirname +'/../public/views/index'));
 });
 
 router.post('/formData2', (req, res, next) => {
@@ -61,39 +62,39 @@ router.post('/formData2', (req, res, next) => {
 // GET route after registering
 router.get('/profile', function (req, res, next) {
     User.findById(req.session.userId)
-      .exec(function (error, user) {
-        if (error) {
-          return next(error);
-        } else {
-          if (user === null) {
-            var err = new Error('Not authorized! Go back!');
-            err.status = 400;
-            return next(err);
-          } else {
-            return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
-          }
-        }
-      });
-  });
+        .exec(function (error, user) {
+            if (error) {
+                return next(error);
+            } else {
+                if (user === null) {
+                    var err = new Error('Not authorized! Go back!');
+                    err.status = 400;
+                    return next(err);
+                } else {
+                    return res.send('<h1>Name: </h1>' + user.username + '<h2>Mail: </h2>' + user.email + '<br><a type="button" href="/logout">Logout</a>')
+                }
+            }
+        });
+});
 
-  // GET for logout logout
+// GET for logout logout
 router.get('/logout', function (req, res, next) {
     if (req.session) {
-      // delete session object
-      req.session.destroy(function (err) {
-        if (err) {
-          return next(err);
-        } else {
-          return res.redirect('/');
-        }
-      });
+        // delete session object
+        req.session.destroy(function (err) {
+            if (err) {
+                return next(err);
+            } else {
+                return res.redirect('/');
+            }
+        });
     }
-  });
+});
 
 
 
 router.get('*', (request, response) => {
-    response.sendFile(path.resolve(__dirname + '/../public/404page/404.html'));
+    response.render(path.resolve( __dirname +'/../public/views/404page/404'));
 });
 
 module.exports = router;
